@@ -1,15 +1,25 @@
 *.class
+<<<<<<< HEAD
 *.bak
+=======
+>>>>>>> e3dcadef51d68b85fc6cbe11482d4443eb569bbf
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
 # Package Files #
+<<<<<<< HEAD
+=======
+*.jar
+>>>>>>> e3dcadef51d68b85fc6cbe11482d4443eb569bbf
 *.war
 *.ear
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
 build/
 dist/
 nbproject/private/
+=======
+>>>>>>> e3dcadef51d68b85fc6cbe11482d4443eb569bbf
