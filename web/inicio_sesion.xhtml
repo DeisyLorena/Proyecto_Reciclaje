@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<ui:composition template="/WEB-INF/template.xhtml">
+    <ui:define name="content">
+        <h:panelGroup rendered="#{!loginController.authenticated}">
+            <section class="Section-Regis">
+                <div class="Work-transparent">
+                    <form jsf:id="loginForm" class="Container">
+                        <h2 class="Titulo">Login</h2>
+                        <input type="email" class="Caja-Texto"
+                            placeholder="Correo Electronico"
+                            jsf:id="email" 
+                            required="true" 
+                            jsf:value="#{loginController.username}"/>
+                        <input type="password" class="Caja-Texto"
+                            placeholder="Contraseña"
+                            jsf:id="passwordUser" 
+                            required="true" 
+                            jsf:value="#{loginController.password}"/>
+                        <section class="Boton">
+                            <button class="Ingresa" type="submit" 
+                                jsf:action="#{loginController.login}" >
+                                Ingresar
+                            </button>
+                            <button class="Ingresa" type="button"      
+                                jsf:outcome="index" >
+                                Cancelar
+                            </button>
+                        </section>
+                    </form>
+                </div>
+            </section>  
+        </h:panelGroup>
+    </ui:define>
+</ui:composition>
+</html>

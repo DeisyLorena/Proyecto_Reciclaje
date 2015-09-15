@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="/WEB-INF/template.xhtml">
+    <ui:define name="content"> 
+        <section class="Section-Regis">
+            <div class="Work-transparent">
+                <h2 class="Regis">REGISTRATE YA..</h2>
+                <form jsf:id="form" class="agregar_user">
+                    <!--<h:selectOneMenu>
+                        <f:selectItem itemLabel="Seleccione Rol ..."  class="Caja-Texto"
+                            noSelectionOption="true"
+                            itemDisabled="true"/>
+                        <f:selectItems value="#{rolController.itemsRol}"
+                            var="dep"
+                            itemLabel="#{dep.nombreRol}"
+                            itemValue="#{dep}"/>
+                    </h:selectOneMenu>-->
+                    <select jsf:value="#{usuarioController.idRol}"
+                        required="true"
+                        size="1"
+                        class="Select1">
+                    <f:selectItem itemLabel="Tipo de Usuario"/>
+                    <f:selectItems value="#{rolController.itemsRol}"
+                        var="rol"
+                        itemLabel="#{rol.nombreRol}"
+                        itemValue="#{rol.idRol}"/>
+                    </select>
+                    <input type="text" class="Caja-Texto"
+                        placeholder="Nombres"
+                        jsf:id="nombreUsuario" 
+                        required="true" 
+                        jsf:value="#{usuarioController.selectedUsuario.nombresUser}"/>
+                    <input type="text" class="Caja-Texto"
+                        placeholder="Primer Apellido"
+                        jsf:id="primerApellido" 
+                        required="true" 
+                        jsf:value="#{usuarioController.selectedUsuario.primerApellido}"/>
+                    <input type="text" class="Caja-Texto"
+                        placeholder="Segundo Apellido"
+                        jsf:id="segundoApellido" 
+                        required="" 
+                        jsf:value="#{usuarioController.selectedUsuario.segundoApellido}"/>      
+                    <input type="tel" class="Caja-Texto"
+                        placeholder="Telefono"
+                        jsf:id="telefonoUser" 
+                        required="true" 
+                        jsf:value="#{usuarioController.selectedUsuario.telefonoUser}"/>
+                    <!-- <h:selectOneMenu>
+                        <f:selectItem itemLabel="Seleccione Ciudad" class="Caja-Texto"
+                            noSelectionOption="true"
+                            itemDisabled="true"/>
+                        <f:selectItems value="#{ciudadController.itemsCiudad}"
+                            var="dep"
+                            itemLabel="#{dep.nombreCiudad}"
+                            itemValue="#{dep}" />
+                    </h:selectOneMenu>-->
+                    <select jsf:value="#{usuarioController.ciudad}"
+                        required="true"
+                        size="1"
+                        class="Select1">
+                    <f:selectItem itemLabel="Seleccione Ciudad"/>
+                    <f:selectItems value="#{ciudadController.itemsCiudad}"
+                        var="ciudad"
+                        itemLabel="#{ciudad.nombreCiudad}"
+                        itemValue="#{ciudad.idCiudad},#{ciudad.idDepartamento.idDepartamento}"/>
+                    </select>
+                    <!--<h:selectOneMenu>
+                        <f:selectItem itemLabel="Seleccione Departamento" class="Caja-Texto"
+                            noSelectionOption="true"
+                            itemDisabled="true"/>
+                        <f:selectItems value="#{departamentoController.itemsDepartamento}"
+                            var="dep"
+                            itemLabel="#{dep.nombreDepartamento}"
+                            itemValue="#{dep}" />
+                    </h:selectOneMenu>-->
+                    <input type="text"  class="Caja-Texto"
+                        placeholder="Direccion"
+                        jsf:id="direccionUser" 
+                        required="true" 
+                        jsf:value="#{usuarioController.selectedUsuario.direccionUser}"/>
+                    <input type="email"  class="Caja-Texto"
+                        placeholder="Correo Electronico"
+                        required="true" 
+                        jsf:value="#{usuarioController.selectedUsuario.correo}"/>
+                    <input type="password"  class="Caja-Texto"
+                        placeholder="Contraseña"
+                        jsf:id="passwordUser" 
+                        required="true" 
+                        jsf:value="#{usuarioController.selectedUsuario.passwordUser}"/>
+                    <!--<h:selectOneMenu>
+                        <f:selectItem itemLabel="Seleccione tipo de documento" class="Caja-Texto"
+                            noSelectionOption="true"
+                            itemDisabled="true" />
+                        <f:selectItems value="#{tipoDocumentoController.itemsTipoDocumento}"
+                            var="dep"
+                            itemLabel="#{dep.descripcionTipoDoc}"
+                            itemValue="#{dep}" />
+                    </h:selectOneMenu>-->
+                    <select jsf:value="#{usuarioController.idTipoDocumento}"
+                        required="true"
+                        size="1"
+                        class="Select1">
+                    <f:selectItem itemLabel="Tipo de Documento"/>
+                    <f:selectItems value="#{tipoDocumentoController.itemsTipoDocumento}"
+                        var="tipo"
+                        itemLabel="#{tipo.descripcionTipoDoc}"
+                        itemValue="#{tipo.idTipoDocumento}"/>
+                    </select>
+                    <input type="date"  class="Caja-Texto"
+                        placeholder="Fecha de nacimiento"
+                        required="true" 
+                        jsf:value="#{usuarioController.selectedUsuario.fechaNacimiento}">
+                        <f:convertDateTime  pattern="yyyy-MM-dd"/>
+                    </input>
+                    <input type="text" class="Caja-Texto"
+                        placeholder="Razon Social"
+                        jsf:id="razonSocial" 
+                        required="true" 
+                        jsf:value="#{usuarioController.selectedUsuario.razonSocial}"/>
+                    <section class="Boton">
+                        <button class="Ingresa" type="submit" 
+                            jsf:actionListener="#{usuarioController.create()}"
+                            jsf:action="index" >
+                            Guardar
+                        </button>
+                        <button class="Ingresa" type="button"      
+                            jsf:outcome="index" >
+                            Cancelar
+                        </button>
+                    </section>
+                </form>  
+            </div>
+         </section>
+    </ui:define>
+</ui:composition>  
+</html>

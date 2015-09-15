@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+<head jsf:id="head">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <!-- fuente de letra google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:500,700' rel='stylesheet' type='text/css' />
+    <!-- fin de letra google fonts -->
+    <link rel="stylesheet" href="#{request.contextPath}/resources/css/normalize.css"/>
+    <link rel="stylesheet" href="#{request.contextPath}/resources/css/estilos.css"/> 
+    <title>SIREC</title>
+</head>
+
+<body jsf:id="body">
+<!-- header -->
+<header class="Header">    
+    <section class="Header-transparent">
+        <div class="Small-menu">
+            <a href="#" class="btn-menu icon-menu2">Menu</a>
+        </div>
+        <nav class="MainMenu">
+            <ul class="MainMenu-list">
+                <!--<li class="MainMenu-item1">
+                <figure class="Header-imageContainerLogo">
+                <img class="Header-imageLogo" src="#{request.contextPath}/resources/images/Logo.jpg" alt="es la descripcion de la imagen" />
+                <figcaption class="Header-descriptionLogo">System Information</figcaption>
+                </figure>
+                </li>-->
+                <li class="MainMenu-item"><a jsf:outcome="index" class="MainMenu-link">Inicio</a></li>  		
+                <li class="MainMenu-item"><a href="" class="MainMenu-link">Nosotros</a></li>
+                <li class="MainMenu-item"><a href="" class="MainMenu-link">¿Porque Reciclaje?</a></li>
+                <li class="MainMenu-item" jsf:rendered="#{loginController.authenticated}"><a jsf:outcome="empresas_reciclaje" class="MainMenu-link">Empresas De Reciclaje</a></li>  		
+                <li class="MainMenu-item" jsf:rendered="#{!loginController.authenticated}"><a jsf:outcome="registrarse" class="MainMenu-link">Registrarse</a></li>
+                <li class="MainMenu-item" jsf:rendered="#{!loginController.authenticated}"><a  jsf:outcome="inicio_sesion" class="MainMenu-link">Login</a></li>
+                <li class="MainMenu-item" jsf:rendered="#{loginController.authenticated}"><a jsf:outcome="pagina_sesion" class="MainMenu-link">Perfi</a></li> 
+                <li class="MainMenu-item" jsf:rendered="#{loginController.authenticated}">
+                    <form jsf:id="logoutForm" >
+                        <a jsf:action="#{loginController.logout}" class="MainMenu-link">Salir</a>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+        <section class="Descripcion">
+            <h1 class="Header-tittle1">PRESERVANDO EL MUNDO</h1>
+                <p class="Header-caja Header-description">Básicamente el RECICLAJE consiste en usar los materiales una y otra vez para hacer nuevos productos reduciendo en forma significativa la utilización de nuevas materias primas.</p>	
+            <h2 class="Header-tittle1">¡AYUDANOS A LOGRARLO!</h2>
+        </section>
+    </section>
+</header>
+<!--Fin del Header-->           
+         
+    <ui:insert name="content">Content</ui:insert>
+            
+<!-- footer-->
+<footer class="Footer-formContainer">
+    <section class="Footer-contacto">
+        <h2 class="Footer-title" >CONTACTO</h2>
+        <div class="Footer-left">           
+            <p class="Footer-description" >Si tienes una sugerencia o comentario ponte en contácto a través de este formulario. </p>
+        </div>
+        <form action="" class="Footer-form ">
+            <input  type="text" placeholder="Nombre" class="Footer-formInput" />  
+            <input  type="email" placeholder="Email" class="Footer-formInput" />
+            <textarea placeholder="Motivo" class="Footer-textArea"></textarea>
+            <button type="submit" class="Footer-button">Contactarme</button>             
+        </form>
+    </section>
+    <section class="Footer-contenedor">
+        <h2 class="Footer-title2">COMPARTE</h2>
+        <ul class="Footer-share">
+            <a href="https://twitter.com/@systeminformat2" class="Footer-link icon-twitter2"></a>
+            <a href="https://es-es.facebook.com/people/Preservando-Mundo/100009877157082" class="Footer-link icon-facebook2"></a>
+        </ul>
+    </section>
+</footer>
+<!-- fin del footer -->
+
+    <script src="#{request.contextPath}/resources/js/jquery.js"></script>	
+    <script src="#{request.contextPath}/resources/js/menu.js"></script>
+
+</body>
+</html>

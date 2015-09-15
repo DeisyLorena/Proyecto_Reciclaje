@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<ui:composition template="/WEB-INF/template.xhtml">
+    <ui:define name="content">
+        <!-- seccion1 -->
+        <section class="Profile1">
+            <h2 class="Profile-title1 icon-recycle">RECICLAJE</h2>
+            <figure class="Profile-Image1">
+                <img src="#{request.contextPath}/resources/images/reciclaje.jpeg" alt="Es la descripción de la imágen" class="Work-image1" />
+            </figure>     
+            <article class="SectionDescription1">
+                <h2 class="Text1" >¿Como reciclar Correctamente?</h2>
+                <ul>
+                <li class="Text-description1">Reducir:Reagrupa todo lo relacionado con la reducción de los residuos</li>
+                <li class="Text-description1">Reutilizar:Reagrupa los procedimientos que permiten darle a un producto ya utilizado un uso nuevo</li>
+                <li class="Text-description1">Reciclar:es el proceso de tratamiento por el que tienen que atravesar los residuos mediante el "Reciclaje".</li>
+                </ul>
+                <a href="http://elreciclaje.org/content/reciclaje-de-papel" class="Profile-link">Ver más...</a>
+            </article> 
+        </section>
+        <!-- fin de la seccion1 -->
+        
+        <!--seccion2-->
+        <section class="Secc2">
+            <div class="Secc-transpatent" >
+            <h2 class="Work-seccion2">IDENTIFICAR EL COLOR DE LAS PAPELERAS</h2>
+            <article class="Seccion2-item">
+                <figure class=" Work-imageContainer2">
+                    <img class="Seccion-image" src="resources/images/verde.png" alt="es la descripcion de la imagen" />
+                    <figcaption class="Work-description2">Residuos Organicos</figcaption>
+                </figure>
+            </article>
+            <article class="Seccion2-item">
+                <figure class="Work-imageContainer2">
+                    <img class="Seccion-image" src="#{request.contextPath}/resources/images/azul.png" alt="es la descripcion de la imagen" />
+                    <figcaption class="Work-description2">Residuos Plasticos</figcaption>
+                </figure>
+            </article>
+            <article class="Seccion2-item">
+                <figure class="Work-imageContainer2">
+                    <img class="Seccion-image" src="#{request.contextPath}/resources/images/gris.png" alt="es la descripcion de la imagen" />
+                    <figcaption class="Work-description2">Residuos de Papel y Carton</figcaption>
+                </figure>
+            </article>
+            <article class="Seccion2-item">
+                <figure class="Work-imageContainer2">
+                    <img class="Seccion-image" src="#{request.contextPath}/resources/images/abano.png" alt="es la descripcion de la imagen" />
+                    <figcaption class="Work-description2">Residuos Biodegradables</figcaption>
+                </figure>
+            </article>
+            <article class="Seccion2-item">
+                <figure class="Work-imageContainer2">
+                    <img src="#{request.contextPath}/resources/images/blanco.png" alt="es la descripcion de la imagen" class="Seccion-image" />
+                    <figcaption class="Work-description2">Residuos de Vidrios</figcaption>
+                </figure>
+            </article>
+            </div>
+        </section>
+        <!-- fin de la seccion 2 -->                
+    </ui:define>
+</ui:composition>
+</html>

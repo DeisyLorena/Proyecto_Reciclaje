@@ -1,0 +1,671 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+body {
+    background-repeat: no-repeat;
+    background-image: url("../images/paisaje.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot?eae6f3');
+    src:url('../fonts/icomoon.eot?#iefixeae6f3') format('embedded-opentype'),
+            url('../fonts/icomoon.ttf?eae6f3') format('truetype'),
+            url('../fonts/icomoon.woff?eae6f3') format('woff'),
+            url('../fonts/icomoon.svg?eae6f3#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before,
+[class^="icon-"]:after, [class*=" icon-"]:after {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-recycle:after {
+    content: "\e60a";
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    margin: 0;      
+    display: -webkit-box;
+    display: inline-block;
+    padding-left: .5em;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;       
+}
+.icon-menu:before {
+    content: "\e600";
+    padding: 2em;
+}
+.icon-menu2:before {
+    content: "\e601";      
+}
+.icon-facebook2:before {
+    text-decoration: none;
+    content: "\e608";
+    font-size: 2em;
+    color: white;
+    background: blue;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: .2em;
+    top: 4em;
+    left: 0;
+}
+.icon-twitter2:before {
+    text-decoration: none;
+    content: "\e609";
+    font-size: 2em;
+    color: white;
+    background: rgba(0, 189, 255, 0.85);
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: .2em;
+    top: 4em;
+    right: 0;        
+}
+.icon-home:before {
+    content: "\e602";
+}
+.icon-go:before {
+    content: "\e603";
+}
+.icon-back:before {
+    content: "\e604";
+}
+.icon-search:before {
+    content: "\e605";
+}
+.icon-remove:before {
+    content: "\e60b";
+}
+.icon-cancel:before {
+    content: "\e606";
+}
+.icon-check:before {
+    content: "\e60c";
+}
+.icon-mail:before {
+    content: "\e607";
+}
+
+/*Header*/
+.Header{
+    margin-top: 0px;
+    /* height: 42.7em; */       
+}
+.Header-transparent {
+    background-color: rgba(000,000,000,0.3);
+    /*height: 42.7em;*/
+}
+.MainMenu{
+    background: #296D1A;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.5em;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.MainMenu-list{
+    /*background-color: rgba(555,555,555,0.2);*/
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;	
+    text-align: center;
+    padding:.8em;
+}
+.MainMenu-item1{
+    display: inline-block;
+    margin: 0;      
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+.Header-imageContainerLogo{
+    display: inline-block;
+    text-align: left;
+    margin:0;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    padding-right: 15em;
+    vertical-align: -webkit-baseline-middle;
+}
+.Header-imageLogo{
+    border-radius: 10em;
+    margin:0;
+}
+.Header-descriptionLogo{
+    position: relative;
+    top: -0.5em;
+}
+.MainMenu-item{
+    display: inline-block;
+    margin-right: 1.5em;
+}
+.MainMenu-item:hover{
+    /* background-color: #16365D;
+    /*background:rgba(41, 109, 26, 0.8);*/
+    /*border-radius: 35%;
+    padding: 0.5em;
+    margin-left: 1em;	
+    -webkit-transition:0.6s;*/        
+}
+.MainMenu-link{
+    color: white;
+    text-decoration: none;
+}
+.Descripcion {
+    padding-top: 3.5em;
+    text-align: center;
+}
+.Header-tittle1{
+    border-bottom: 1px;
+    color:rgba(255, 253, 255, 0.85);
+    font-size:1.5em;
+    font-weight: bold;
+    margin:0px;	
+    padding: 1em 0em 1em 0em;
+    text-align: center;
+}
+.Header-caja{
+    background-color: rgba(999,999,999,0.7);
+    display: inline-block;
+    border-radius: 1em;
+    max-width: 30em;
+}
+.Header-description{
+    color: black;
+    display: inline-block;
+    text-align: center;
+    width: 30em;
+    padding: 1em;
+}
+/*fin del header.*/
+
+/*seccion 1*/
+.Profile1{
+    border-bottom: 1px;
+    border-top: 1px dashed #000000;
+    text-align: center;   
+}
+.Profile-title1{
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;    
+    text-align: center;
+    display: block;
+    padding: 1em;
+}
+.Profile-Image1{
+    border-radius: .5em 50%;
+    border: 5px white;
+    /* position: relative; */
+    margin: 0em;
+    /* margin-left: -12em; */
+    display: inline-block;
+    margin-bottom: 2em;
+   /*padding-top: 1em;*/
+}
+.Work-image1 {
+    border-radius: 1em;        
+    width: 20em;
+    height: 12em;
+    border: #FFF solid;
+}
+.SectionDescription1{
+    padding-top: 1em;
+    display: inline-block;
+    color: navy;
+    padding: 2em 0em 0em 4em;        
+    color: white; 
+    text-align: center;
+    max-width: 30em;
+}
+.Text1{
+    margin:0;
+    padding: 0 0 1em 0;
+}
+.Text-description1{
+    margin:0;
+    padding: 0;
+    text-align: left;
+    padding-bottom: .5em;
+}
+.Profile-link {
+    color: #08B;
+    font-weight: bold;
+}
+.Work-description1{
+    color: white;
+}
+/*fin de la seccion 1*/
+
+/*seccion2*/
+.Secc2{
+    border-bottom: 1px;
+    text-align: center;
+}
+.Secc-transpatent {
+    background-color: rgba(000,000,000,0.3);
+    padding: 1.5em;
+}
+.Work-seccion2{
+    color: white;
+    font-size: 1.3em;
+    font-weight: normal;
+    text-align: center;
+    /*border-bottom: 1px dashed #11E1E1;*/
+    padding-bottom: .5em;
+    padding-top: .5em;
+}
+.Seccion2-item{
+    display: inline-block;
+    margin-bottom: 1.8em;
+}
+.Work-description2{
+    color:#B6FBFB;
+}
+/*fin de la seccion 2*/
+
+/*footer*/
+.Footer-formContainer{
+    display: block;
+    padding:  auto;
+    padding-top: 1em;
+    text-align: center;
+}
+.Footer-contacto{
+    display: inline-block;
+    text-align: center;
+}
+.Footer-title{
+    color: white;	
+    margin: 0;	
+    display: block;
+    text-align: center;
+    padding: 1em 0em;		
+}
+.Footer-left{
+    display: inline-block;
+    vertical-align: top;
+    padding: 2.5em 1em 0 1em;
+}
+.Footer-description{
+    width: 18em;
+    color: white;       
+    vertical-align: top;
+    display:inline-block;
+}
+.Footer-form {
+    text-align: center;
+    padding: 1em;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+84&amp;1+0,0+100 */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.16) 84%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(84%,rgba(255,255,255,0.16)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.16) 84%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.16) 84%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.16) 84%,rgba(255,255,255,0) 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+    border-radius: 1em;
+    max-width:10em;
+    display:inline-block;
+}
+.Footer-textArea,
+.Footer-formInput{
+    border-radius: .2em;
+    background: white;
+    display: block;
+    margin:.5em 0em;
+    padding: 0.5em 0em;
+    text-align: center;
+    border: none;
+    border: 0.1em solid #0D3105;
+}
+.Footer-button{
+    border-radius: .5em;
+    background-color: #0D3105;
+    color: white;
+    border: none;
+    padding: .5em 1em;
+}
+.Footer-contenedor{
+    display: block;
+    max-height: 200px;
+    border-bottom: 1px;
+    padding-bottom: 2em;
+}
+.Footer-title2{
+    color: white;
+    padding-top: 1em;
+    padding-bottom: .5em;
+    margin: 0;
+    text-align: center;
+    margin-bottom: .5em;         
+}
+.Footer-share{
+    text-align: center;
+    width: 4em;
+    display: inline;
+}
+.Footer-link{
+    border-radius: 12em;
+    padding:.5em;
+}
+/*fin del footer*/
+
+/* estilos de los formularios Inicio de Sesion y Registrarse  */
+.Section-Regis {
+    text-align: center;
+    padding: 1em;
+}
+.Work-transparent {
+    background-color: rgba(999,999,999,0.7);
+    text-align: center;
+    width: 40em;
+    display: inline-block;
+    border-radius: 2em;
+}
+.Regis{
+    text-align: center;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+.agregar_user {
+    text-align: center;
+    display: inline-block;
+    width: 80%;       
+}
+.Select1{
+    padding: .5em;
+    width: 11em;
+    margin: .2em;
+}
+.Caja-Texto {
+    padding: .5em;
+    margin: .2em;
+}
+.Boton{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.Ingresa {
+    border-radius: 2em;
+    background-color: rgb(50, 119, 22);
+    color: white;
+    border: none;
+    padding: .5em 1em;
+    margin: .5em;
+    display: inline-block;
+}
+.Ingresa:hover{
+    box-shadow: inset 0 -70px 0 0 #08B;	
+    -webkit-transition:0.6s;
+}
+.Container {
+    width: 60%;
+    text-align: center;
+    display: inline-block;  
+}
+.Titulo {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+/*Fin de los estilos de inicio de seision y registrarse*/ 
+
+/*pagina_sesion*/
+.Page-inicioSesion{
+    text-align: center;
+    color: #C4E8B5;
+}
+.regre{
+    text-align: center;
+    color: #D1FDE1;
+    text-decoration: none;
+    display: block;
+}
+/*fin pagina_sesion*/
+
+/*pagina empresas_recicalje*/
+.Empresa-recycle{
+    text-align: center;
+    color: #C4E8B5;
+}
+/*fin pagina empresas_reciclaje*/
+
+/*incian los media query*/
+/*media query para tablet*/
+@media (max-width: 850px){ 
+    /*header*/
+    .MainMenu{
+        width: auto;
+    }
+    .MainMenu-list{
+        width: auto;
+    }    
+    .Header-caja{
+        max-width: 22em;  
+    }
+    /*fin header*/
+    
+    /*seccion1*/
+    .Profile-Image1{
+        display: block;       
+    }    
+    .SectionDescription1{
+        padding: 2em 0em 3em 0em;
+    }
+    /*fin seccion1*/
+    
+    /*seccion2*/
+    .Secc-transpatent{
+        padding: 0;
+    }
+    .Work-seccion2{
+        padding: 1.5em;
+    }    
+    .Seccion2-item{
+        max-height: 20%;    
+    }    
+    .Work-imageContainer2{
+        margin: 0;
+        display: block;
+        text-align: center;
+        padding: 0em 1em;
+        display: inline-block;
+    }       
+    .Seccion-image{
+        height: auto;
+    }    
+    .Work-description2{
+        text-align: center;  
+    }
+    /*fin seccion2*/
+    
+    /*formularios de inicio sesion y registrarse*/
+    .Work-transparent{
+        width: 25em;          
+    }
+    .agregar_user{
+        width: auto;
+    }
+    /*fin formulario inicio sesion y registrarse*/
+}
+/*Fin media query para tablet*/
+
+/*media query para celular*/
+@media (max-width: 400px ){
+    /*Header*/
+    .Header {
+	margin: 0;
+    }
+    .Header-transparent{
+        text-align: center;
+    }  
+    .Small-menu{
+	display: block;
+	width: 100%;
+	background-color: #000;
+	height: 2.8em;	
+	padding: .5em;
+	position: fixed;
+	z-index:1;
+    }
+    .Small-menu .btn-menu {
+	display: block;
+	font-size: 1.8em;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+	text-align: left;
+	padding-left:1em;
+        color:#FFF;
+    }  
+    .Header .MainMenu {
+	width:80%;
+	height: auto;
+	margin:0;
+	position: fixed;
+	left: -100%;
+	top: 3.8em;
+        background-color: #000;
+    }
+    .Header .MainMenu .MainMenu-list .MainMenu-item {
+	display: block;
+	float: none;
+	border-bottom: 1px solid #FFF;
+	margin: 0;
+	width: auto;
+	text-align: left;
+    }
+    .Header .MainMenu .MainMenu-list .MainMenu-item .MainMenu-link {
+	display: block;
+	padding-left:1.5em; 
+    }    
+    .MainMenu-list{
+        display: block;
+        padding: 0;
+    }     
+    .MainMenu-item {
+        padding: 1em;
+    }    
+    .Descripcion{
+        margin:0;
+        display: inline-block;
+        text-align: center;
+        max-width: 100%;
+    }    
+    .Header-caja{
+        width: 70%;   
+    }
+    /*fin header*/    
+    
+    /*seccion1*/
+    .Profile1{
+        height: auto;
+        width: auto;
+        display: inline-block;
+    }
+    .Profile-title1{
+        padding: 1em 0em;
+    }
+    .Work-image1{
+        width: 60%;
+        height: 9em;
+    }
+    .SectionDescription1{
+        height: 90%;
+        padding: 1em 2em;  
+    }
+    .Text-description1{
+        float: left;
+    }
+    /*fin seccion1*/
+    
+    /*seccion2*/
+    .Secc-transpatent{
+        float: top;
+    }
+    .Seccion2-item {
+        display:block;
+    }
+    .Work-imageContainer2{
+        display: inline-block;
+        margin:0;
+        max-width: 90%;
+        padding: 0em 0em;
+    }
+    .Work-description2{
+        text-align: center;
+    }
+    /*fin seccion2*/
+    
+    /*footer*/
+    .Footer-formContainer{
+        max-width: 100%;
+        display: inline-block;
+        text-align: center;   
+    }
+    .Footer-contacto{
+        width: 95%;
+    }
+    .Footer-left{
+        margin:0;
+        display: inline-block;
+        max-width:90%;
+        padding: 0;
+        float:none;
+    }
+    .Footer-description{
+        padding: 1em 0em;
+        max-width: 100%;
+        float:none;
+        margin: 0em;   
+    }
+    .Footer-form{
+        display: inline-block;
+        width: 75%;
+        float: none;
+    }
+    .Footer-formInput{
+        width: 100%;
+    }
+    .Footer-textArea{
+        width: 100%;
+    }
+    /*fin footer*/
+    
+    /*inicio sesion y registrarse*/
+    .Work-transparent{
+        background-color: rgba(999,999,999,0.4);
+        width: auto;          
+    }
+    .Regis {
+        color:#FFF;
+    }
+    .Container {
+        width: auto;
+    }
+    /*Fin inicio sesion y registrarse*/
+}
+/* Fin media query para celular*/
